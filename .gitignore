@@ -1,0 +1,85 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Database
+*.db
+*.db-journal
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Storage (user uploads)
+storage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Temp / test artifacts
+test_files/
+extracted_result/
+downloaded_result.zip
+test.zip
+backend/complex_result_extracted/
+backend/complex_result.zip
+backend/complex_test/
+backend/complex_test.zip
+backend_cleaning.tar.gz
+frontend_fix.tar.gz
+invoice_deploy.tar.gz
+invoice_field_chain_fix.tar.gz
+
+# Backup
+backup_*/
+
+# Archives
+*.tar.gz
+*.zip
+
+# Backend test/temp artifacts
+backend/result_v2_extracted/
+backend/test_browser.js
+backend/test_browser.mjs
+backend/backend_changes.tar.gz
+backend/backend_update.tar.gz
+
+# Test upload page
+test_upload.html
+
+# Reports containing sensitive info (server IP, paths, credentials)
+部署报告.md
+验收清单.md
+DEPLOYMENT_CLEANING.md
+BACKEND_IMPLEMENTATION.md
+ATTRIBUTIONS.md
+backend/*REPORT*.md
+backend/*COMPLETE*.md
+backend/*COMPLETED*.md
+backend/PHASE*.md
+backend/SECURITY_FIXES.md
+backend/测试报告.md

@@ -1,0 +1,183 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #f0f4ff;
+  --foreground: #1a1d2e;
+  --card: #ffffff;
+  --card-foreground: #1a1d2e;
+  --popover: #ffffff;
+  --popover-foreground: #1a1d2e;
+  --primary: #4f6ef7;
+  --primary-foreground: #ffffff;
+  --secondary: #e8edff;
+  --secondary-foreground: #1a1d2e;
+  --muted: #e9edf8;
+  --muted-foreground: #5c6488;
+  --accent: #e4eaff;
+  --accent-foreground: #1a1d2e;
+  --destructive: #e5484d;
+  --destructive-foreground: #ffffff;
+  --border: #d6ddf0;
+  --input: transparent;
+  --input-background: #edf1fc;
+  --switch-background: #c0c8df;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #4f6ef7;
+  --chart-1: #4f6ef7;
+  --chart-2: #10b981;
+  --chart-3: #f59e0b;
+  --chart-4: #8b5cf6;
+  --chart-5: #ec4899;
+  --radius: 0.625rem;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #1a1d2e;
+  --sidebar-primary: #4f6ef7;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #e8edff;
+  --sidebar-accent-foreground: #1a1d2e;
+  --sidebar-border: #d6ddf0;
+  --sidebar-ring: #4f6ef7;
+}
+
+.dark {
+  --background: #0c0e16;
+  --foreground: #e8eaf0;
+  --card: #151824;
+  --card-foreground: #e8eaf0;
+  --popover: #151824;
+  --popover-foreground: #e8eaf0;
+  --primary: #6380f8;
+  --primary-foreground: #ffffff;
+  --secondary: #1c2038;
+  --secondary-foreground: #e8eaf0;
+  --muted: #1c2038;
+  --muted-foreground: #7d88aa;
+  --accent: #1c2038;
+  --accent-foreground: #e8eaf0;
+  --destructive: #e5484d;
+  --destructive-foreground: #ffffff;
+  --border: #262c44;
+  --input: #1c2038;
+  --ring: #6380f8;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #6380f8;
+  --chart-2: #34d399;
+  --chart-3: #fbbf24;
+  --chart-4: #a78bfa;
+  --chart-5: #f472b6;
+  --sidebar: #111320;
+  --sidebar-foreground: #e8eaf0;
+  --sidebar-primary: #6380f8;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #1c2038;
+  --sidebar-accent-foreground: #e8eaf0;
+  --sidebar-border: #262c44;
+  --sidebar-ring: #6380f8;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  html {
+    font-size: var(--font-size);
+  }
+  h1 { font-size: var(--text-2xl); font-weight: var(--font-weight-medium); line-height: 1.5; }
+  h2 { font-size: var(--text-xl); font-weight: var(--font-weight-medium); line-height: 1.5; }
+  h3 { font-size: var(--text-lg); font-weight: var(--font-weight-medium); line-height: 1.5; }
+  h4 { font-size: var(--text-base); font-weight: var(--font-weight-medium); line-height: 1.5; }
+  label { font-size: var(--text-base); font-weight: var(--font-weight-medium); line-height: 1.5; }
+  button { font-size: var(--text-base); font-weight: var(--font-weight-medium); line-height: 1.5; }
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+
+  /* Fix checkbox styling in light mode */
+  input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    border: 1.5px solid var(--border);
+    border-radius: 4px;
+    background-color: var(--card);
+    cursor: pointer;
+    position: relative;
+    transition: all 0.15s ease;
+  }
+
+  input[type="checkbox"]:checked {
+    background-color: var(--primary);
+    border-color: var(--primary);
+  }
+
+  input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 4.5px;
+    top: 1.5px;
+    width: 4px;
+    height: 8px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+
+  input[type="checkbox"]:hover {
+    border-color: var(--primary);
+  }
+
+  input[type="checkbox"]:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
